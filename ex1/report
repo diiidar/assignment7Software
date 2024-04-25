@@ -1,0 +1,13 @@
+We define the SupportHandler interface with a handleRequest method to handle support requests.
+
+Concrete handlers (HardwareSupportHandler, SoftwareSupportHandler, NetworkSupportHandler) implement
+the SupportHandler interface and handle requests based on their types.
+
+Handlers are organized in a hierarchical order, with each handler having a reference to the next handler in the chain.
+
+The HelpDeskTicketingSystem class creates the chain of responsibility by linking the handlers in the desired order.
+
+We test the system by creating sample support requests and passing them through the chain of responsibility.
+
+This design allows different types of support requests to be handled by different support teams in a hierarchical manner,
+as required by the Chain of Responsibility pattern.
